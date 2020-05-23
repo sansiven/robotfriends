@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
-import CardList from './CardList';
-import {robots} from './robots';
-import SearchBox from './SearchBox';
+import React from 'react';
+import {Component} from 'react';
+import CardList from './Components/CardList';
+/*import {robots} from './Components/robots';*/
+import SearchBox from './Components/SearchBox';
 import Scroll from './Scroll';
 import './App.css';
 
@@ -18,7 +19,7 @@ class App extends Component {
 
 	componentDidMount() {
 		fetch('https://jsonplaceholder.typicode.com/users')
-		.then(response=> response.json())
+		.then(response => response.json())
 		.then(users => this.setState({robots:users}))		
 	}
 
