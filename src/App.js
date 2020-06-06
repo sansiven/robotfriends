@@ -25,6 +25,7 @@ class App extends Component {
 	}
 
 	onSearchchange =(event) => {
+		console.log(this.props.store)
 		this.setState({searchfield: event.target.value});
 		//console.log(event.target.value);
 	};
